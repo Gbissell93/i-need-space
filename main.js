@@ -8,6 +8,8 @@ const riseResult =document.querySelector('#rise');
 const setResult =document.querySelector('#set');
 const culmResult =document.querySelector('#peak');
 
+
+
 //get api data from input section
 const getLocationData = async () => {
     //fetch and convert raw data
@@ -31,9 +33,9 @@ const getLocationData = async () => {
         const culmination = satDat[0].culmination;
 
         //utc time for set, rise, and culm positions
-        const setDate =set.utc_datetime
-        const riseDate =rise.utc_datetime
-        const culminationDate =culmination.utc_datetime
+        // const setDate =set.utc_datetime
+        // const riseDate =rise.utc_datetime
+        // const culminationDate =culmination.utc_datetime
 
         //convert utc to locale time zone
                 const convertToLocal = (timestamp) => {
@@ -57,6 +59,8 @@ const getLocationData = async () => {
         riseResult.innerHTML = `${getDate(rise.utc_datetime)} ${convertToLocal(rise.utc_timestamp)} `;
         culmResult.innerHTML = `${getDate(culmination.utc_datetime)} ${convertToLocal(culmination.utc_timestamp)} `;
         setResult.innerHTML = `${getDate(set.utc_datetime)} ${convertToLocal(set.utc_timestamp)} `;
+        output.style.display = 'block'
+        output.style.opacity = '1'
 
     }
     createMessage()

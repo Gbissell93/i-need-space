@@ -6,7 +6,11 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #caf0f8;
+    background-image: url('https://source.unsplash.com/1600x900/?space');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1, h2 {
@@ -25,7 +29,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #00b4d8;
+    background-color: transparent;
     padding: 0 24px;
 }
 
@@ -45,7 +49,7 @@ h2 {
 }
 
 .row div {
-    flex: 2;
+    flex: 1;
 }
 
 label {
@@ -87,4 +91,13 @@ button:hover {
 
 .result {
     padding: 25px;
+}
+.output {
+    display: none;
+    opacity: 0;
+}
+
+#heading {
+    background-color: #90e0ef;
+    padding: 5px;
 }
