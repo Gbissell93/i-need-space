@@ -45,7 +45,7 @@ h2 {
 }
 
 .row div {
-    flex: 1;
+    flex: 2;
 }
 
 label {
@@ -78,4 +78,13 @@ button {
 
 button:hover {
     box-shadow: 0 0 20px #caf0f8;
+}
+
+.output-item {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.result {
+    padding: 25px;
 }
